@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contoh Animasi CSS cuy</title>
+  <style>
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    .element {
+      width: 100px;
+      height: 100px;
+      background-color: transparent; /* Ubah warna latar belakang menjadi transparan */
+      border-radius: 50%; /* Ubah radius border menjadi 50% untuk membuat bentuk lingkaran */
+      animation-name: spin;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      /* Tambahkan logo sebagai background */
+      background-image: url('/images/NIKE-RD.png'); /* Ganti 'path-to-your-logo.png' dengan path gambar logo Anda */
+      background-size: contain; /* Sesuaikan ukuran gambar agar terlihat proporsional */
+      background-repeat: no-repeat; /* Hindari pengulangan gambar */
+      background-position: center; /* Posisikan gambar di tengah elemen */
+    }
+  </style>
+</head>
+<body>
+  <div class="element"></div>
+</body>
+</html>
+

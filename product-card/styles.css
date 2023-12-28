@@ -1,0 +1,164 @@
+:root {
+  --biru: #0095da;
+  --jingga: #f37021;
+  --abu: #8b8b8b;
+  --merah-terang: #f9b9bc;
+  --merah: #ef3b42;
+}
+
+@font-face {
+  font-family: "TT Commons Pro";
+  font-weight: normal;
+  src: url("/fonts/TT Commons Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "TT Commons Pro";
+  font-weight: medium;
+  src: url("/fonts/TT Commons Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "TT Commons Pro";
+  font-weight: bold;
+  src: url("/fonts/TT Commons Bold.ttf") format("truetype");
+}
+
+p {
+  font-family: "TT Commons Pro", Arial, sans-serif;
+}
+
+p.bold {
+  font-weight: bold;
+}
+
+button {
+  font-family: "TT Commons Pro", Arial, sans-serif;
+}
+
+html: {
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "TT Commons Pro", Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+/* Container */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Set the height of the container to fill the viewport height */
+}
+
+/* Product Card */
+
+.product-container {
+  display: flex;
+  position: relative;
+  align-items: center;
+  width: 100%;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 2px;
+  margin: 5px 20px;
+}
+
+.product-container::-webkit-scrollbar {
+  display: none;
+}
+
+.product-card {
+  flex: 0 0 auto;
+  border-radius: 12px;
+  width: 182px;
+  margin: 0 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.product-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.product-details {
+  flex: 2;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-title {
+  max-height: 3em; /* Set the maximum height for 2 lines of text */
+  overflow: hidden;
+  font-size: 16px;
+  margin: 10px 0 5px 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Limit the text to 2 lines */
+  -webkit-box-orient: vertical;
+}
+
+.product-description {
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.product-price-container {
+  margin-top: auto; /* To push prices to the bottom of the card */
+}
+
+.price {
+  color: var(--jingga);
+  font-weight: medium;
+  margin-top: 5px;
+  font-size: 16px;
+}
+
+.discount-price {
+  color: var(--abu);
+  font-size: 14px;
+}
+
+.discount-percentage {
+  color: var(--merah);
+  font-weight: medium;
+  font-size: 14px;
+  background-color: var(--merah-terang);
+  padding: 2px 5px;
+  border-radius: 12px;
+}
+
+.add-to-bag-button {
+  background-color: var(--biru);
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 10px;
+  align-self: center;
+  border-radius: 12px;
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .product-card {
+    width: 132px;
+  }
+}
+
+
+
